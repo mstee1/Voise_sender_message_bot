@@ -3,7 +3,7 @@ import speech_recognition
 from dotenv import load_dotenv
 import telegram
 from chat_dict import CHAT_DICT
-from image_dict import IMG_DICT
+# from image_dict import IMG_DICT
 
 load_dotenv()
 
@@ -47,14 +47,14 @@ def main():
     message = listen_comand()
     print(message)
     send_message(bot, message, CHAT_ID)
-    choise_photo = listen_comand()
-    if choise_photo in IMG_DICT.keys():
-        name_photo = IMG_DICT.get(choise_photo)
-        print(name_photo)
-        photo = open(f'{name_photo}', 'rb')
-        send_photo(bot, photo, CHAT_ID)
-    else:
-        return 'OOOOPPPPSSS.....'
+    # choise_photo = listen_comand()
+    # if choise_photo in IMG_DICT.keys():
+    #     name_photo = IMG_DICT.get(choise_photo)
+    #     print(name_photo)
+    #     photo = open(f'{name_photo}', 'rb')
+    #     send_photo(bot, photo, CHAT_ID)
+    # else:
+    #     return 'OOOOPPPPSSS.....'
 
 
 
